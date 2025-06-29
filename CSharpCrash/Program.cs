@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Text.Json.Serialization.Metadata;
 
 class Program
 {
@@ -13,6 +14,8 @@ class Program
         LogicalOperator();
         ConditonalStatements();
         Loops();
+        Arrays();
+        Collections();
 
     }
 
@@ -219,6 +222,72 @@ class Program
         { Console.WriteLine("Using standard For Loop: "+ numbers[i]);
         }
 
+
     }
 
+    static void Arrays()
+    {
+        //Arrays
+        string[] names = new string[3];
+        names[0] = "Ron";
+        names[1] = "Katie";
+        names[2] = "Jack";
+
+        Console.WriteLine(names.Length);
+        Console.WriteLine(names[2]);
+    }
+    
+    static void Collections()
+    {
+        List<string> cities = new List<string>();
+        cities.Add("Berlin");
+        cities.Add("Tokyo");
+        cities.Add("Beijing");
+        cities.Add("Ohio");
+
+        Console.WriteLine("cities count:"+cities.Count);
+        Console.WriteLine(cities[0]);
+
+        foreach (string city in cities)
+        {
+            Console.WriteLine(city);
+        }
+        
+        HashSet<String> countries= new HashSet<String>();
+        countries.Add("India");
+        countries.Add("America");
+        countries.Add("China");
+        countries.Add("Russia");
+        countries.Add("America");
+
+        Console.WriteLine("countries Count: "+countries.Count);
+        //Console.WriteLine(countries[0]); - Doesnt works withb HashSet
+        foreach (string country in countries)
+        {
+            Console.WriteLine(country);
+        }
+
+        //Dictionary
+        Dictionary<string,int> ageDict = new Dictionary<string,int>();
+        string DictKey = "Alice";
+        ageDict[DictKey] = 30;
+
+
+        string DictKey2 = "Bob";
+        ageDict[DictKey2] = 75;
+        ageDict["Tracy"] = 50;
+
+        //check if Dictionary Contains Dictkey OR not 
+
+        if (ageDict.ContainsKey(DictKey))
+        {
+            Console.WriteLine("{0}'s age: {1}", DictKey, ageDict[DictKey]);
+        }
+        //iterating Dictionary using foreach and key, values
+        foreach(var entry in ageDict)
+        {
+            Console.WriteLine("Key: "+entry.Key);
+            Console.WriteLine("Value: "+entry.Value);
+        }
+    }
 }
