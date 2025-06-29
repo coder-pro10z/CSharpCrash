@@ -1,8 +1,10 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 using System.Text.Json.Serialization.Metadata;
-
+using CSharpCrash;
 class Program
 {
     static void Main()
@@ -16,7 +18,9 @@ class Program
         Loops();
         Arrays();
         Collections();
-
+        Methods();
+        Classes();
+        ExceptionHandling();
     }
 
     static void PrintToConsole()
@@ -236,7 +240,7 @@ class Program
         Console.WriteLine(names.Length);
         Console.WriteLine(names[2]);
     }
-    
+
     static void Collections()
     {
         List<string> cities = new List<string>();
@@ -245,22 +249,22 @@ class Program
         cities.Add("Beijing");
         cities.Add("Ohio");
 
-        Console.WriteLine("cities count:"+cities.Count);
+        Console.WriteLine("cities count:" + cities.Count);
         Console.WriteLine(cities[0]);
 
         foreach (string city in cities)
         {
             Console.WriteLine(city);
         }
-        
-        HashSet<String> countries= new HashSet<String>();
+
+        HashSet<String> countries = new HashSet<String>();
         countries.Add("India");
         countries.Add("America");
         countries.Add("China");
         countries.Add("Russia");
         countries.Add("America");
 
-        Console.WriteLine("countries Count: "+countries.Count);
+        Console.WriteLine("countries Count: " + countries.Count);
         //Console.WriteLine(countries[0]); - Doesnt works withb HashSet
         foreach (string country in countries)
         {
@@ -268,7 +272,7 @@ class Program
         }
 
         //Dictionary
-        Dictionary<string,int> ageDict = new Dictionary<string,int>();
+        Dictionary<string, int> ageDict = new Dictionary<string, int>();
         string DictKey = "Alice";
         ageDict[DictKey] = 30;
 
@@ -284,10 +288,64 @@ class Program
             Console.WriteLine("{0}'s age: {1}", DictKey, ageDict[DictKey]);
         }
         //iterating Dictionary using foreach and key, values
-        foreach(var entry in ageDict)
+        foreach (var entry in ageDict)
         {
-            Console.WriteLine("Key: "+entry.Key);
-            Console.WriteLine("Value: "+entry.Value);
+            Console.WriteLine("Key: " + entry.Key);
+            Console.WriteLine("Value: " + entry.Value);
+        }
+
+        //Queue
+        Queue<String> queue = new Queue<String>();
+        queue.Enqueue("First");
+        queue.Enqueue("Second");
+        queue.Enqueue("Third");
+        string item;
+        while (queue.Count > 0)
+        {
+            item = queue.Dequeue();
+            Console.WriteLine("Queue item:" + item);
+
+        }
+
+        //Stack
+        Stack<String> stack = new Stack<String>();
+        stack.Push("First");
+        stack.Push("Second");
+        stack.Push("Third");
+
+        string item2;
+        int count = stack.Count;
+        while (stack.Count > 0)
+        {
+            item2 = stack.Pop();
+            Console.WriteLine("stack item: " +item2);
         }
     }
+
+    static void Methods() {
+        SayHello();
+
+        int num1 =10;
+
+        int num2 =20;
+        Add(num1,num2);
+
+       
+
+    }
+    private static void SayHello() {
+        Console.WriteLine("Hello World!");
+    }
+    private static void Add(int num1, int num2) { 
+    int sum = num1 + num2;
+        Console.WriteLine("Sum : " + sum);
+    }
+
+    private static void Classes()
+    {
+        Person p = new Person("Alice", 30);
+        p.Greet();
+    }
+
+
 }
