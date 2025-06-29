@@ -347,5 +347,19 @@ class Program
         p.Greet();
     }
 
+    public static void ExceptionHandling()
+    {
+    //Custom Exception Handling
+        bool isStudent = false;
 
+        try
+        {
+            if (isStudent)
+                Console.WriteLine("The student is Enrolled!");
+            else
+                throw new CustomException("You cannot enroll to this course as you are not a student!");
+        }
+        catch (CustomException ex) { Console.WriteLine(ex.Message); }
+        finally { Console.WriteLine("All code has been Run!"); }
+    }
 }
