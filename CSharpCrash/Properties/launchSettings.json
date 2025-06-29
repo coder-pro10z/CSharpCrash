@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CSharpCrash": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
