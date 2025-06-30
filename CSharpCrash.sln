@@ -5,6 +5,10 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpCrash", "CSharpCrash\CSharpCrash.csproj", "{A28E33BC-6E8B-4151-8D08-2E177B4E19C1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz", "FizzBuzz\FizzBuzz.csproj", "{D907DC4F-2A90-4E33-A23C-2D737BFD66AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationTable", "MultiplicationTable\MultiplicationTable.csproj", "{D0A6FDAF-6365-4576-90B5-BDE979982695}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A28E33BC-6E8B-4151-8D08-2E177B4E19C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A28E33BC-6E8B-4151-8D08-2E177B4E19C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A28E33BC-6E8B-4151-8D08-2E177B4E19C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D907DC4F-2A90-4E33-A23C-2D737BFD66AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D907DC4F-2A90-4E33-A23C-2D737BFD66AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D907DC4F-2A90-4E33-A23C-2D737BFD66AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D907DC4F-2A90-4E33-A23C-2D737BFD66AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A6FDAF-6365-4576-90B5-BDE979982695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A6FDAF-6365-4576-90B5-BDE979982695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A6FDAF-6365-4576-90B5-BDE979982695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A6FDAF-6365-4576-90B5-BDE979982695}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

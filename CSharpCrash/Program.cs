@@ -21,6 +21,8 @@ class Program
         Methods();
         Classes();
         ExceptionHandling();
+        Console.WriteLine("Press Enter to exit...");
+        Console.ReadLine();
     }
 
     static void PrintToConsole()
