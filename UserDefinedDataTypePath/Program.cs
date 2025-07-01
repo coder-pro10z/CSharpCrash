@@ -1,4 +1,6 @@
-﻿public class ConfigPath
+﻿using UserDefinedDataTypePath;
+
+public class ConfigPath
 {
      public string Path1 { get; set; }
      public string Path2 { get; set; }
@@ -23,6 +25,7 @@ public class Config
             Config config = new Config();
 
             Console.WriteLine(config.Paths.Path1);
+        UserDefinedDataTypeRead.ReadPathFromConfig();
             
         }
     }
