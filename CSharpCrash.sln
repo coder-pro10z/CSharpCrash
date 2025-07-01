@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationTable", "Mult
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreditCardMasker", "CreditCardMasker\CreditCardMasker.csproj", "{58D5680C-324C-416B-B583-7AC476670F6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDefinedDataTypePath", "UserDefinedDataTypePath\UserDefinedDataTypePath.csproj", "{D64EDEBC-4223-42F8-9AC2-DB624C4634B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{58D5680C-324C-416B-B583-7AC476670F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58D5680C-324C-416B-B583-7AC476670F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58D5680C-324C-416B-B583-7AC476670F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64EDEBC-4223-42F8-9AC2-DB624C4634B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64EDEBC-4223-42F8-9AC2-DB624C4634B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64EDEBC-4223-42F8-9AC2-DB624C4634B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64EDEBC-4223-42F8-9AC2-DB624C4634B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
