@@ -23,26 +23,63 @@ public class ContactManager
     {
         //creating a instance of ContactManager(non-static)
         ContactManager cm = new ContactManager();
-        
+
         ///Add a CLI Menu Here
         ///
+        Console.WriteLine("Hey there i am your Contact Manager, to use me You can Enter a number from the following List :");
+        string UserInput;
+        do
+        {
+        Console.WriteLine("1.Add Contact \r\n2.View Contact\r\n3.Update Contact\r\n4.Delete Contact\r\n5.List All Contact\r\n6.Exit");
+            UserInput=Console.ReadLine();
+            switch (UserInput)
+            {
+                case "1":
+                    cm.AddContact();
+                    break;
+
+                case "2":
+                    cm.ViewContact();
+                    break;
+                case "3":
+                    cm.UpdateContact();
+                    break;
+                case "4":
+                    cm.DeleteContact();
+                    break;
+                case "5":
+                    cm.ListAllContacts();
+                    break;
+                case "6":
+                    Console.WriteLine("Closing Contact Manager.");
+                    break;
+                case "exit":
+                    Console.WriteLine("Closing Contact Manager.");
+                    break;
+                default:
+                    Console.WriteLine("Enter a Valid Input.");
+                    break;
+
+            }
+        }
+        while (!UserInput.ToLower().Equals("exit") || UserInput.Equals("6") || (string.IsNullOrWhiteSpace(UserInput)) || UserInput=="");
 
         cm.Contacts.Add("98776556778","Alice" );
-        cm.AddContact();
+        //cm.AddContact();
 
-        cm.ViewContact();
+        //cm.ViewContact();
         
         ////Update Contact of a Existing Person
         ///
-        cm.UpdateContact();
+        //cm.UpdateContact();
     
         ////Delete Contact
         ///
-        cm.DeleteContact();
+        //cm.DeleteContact();
         
         ////List All contacts
         ///
-        cm.ListAllContacts();
+        //cm.ListAllContacts();
         
         //Exit 
 
@@ -75,29 +112,27 @@ public class ContactManager
     public void ViewContact()
     {
 
-        //Console.WriteLine("Enter a Contact Name:");
-        //string ContactName = Console.ReadLine();
-
-        Console.WriteLine("Enter a Contact Number:");
-        string ContactNumber = Console.ReadLine();
-        //string ContactNumber;
-        //bool isNotUnique;
-        //do
-        //{
-        //    Console.WriteLine("Enter a Contact Number:");
-        //    ContactNumber = Console.ReadLine().Trim();
-        //    isNotUnique = Contacts.ContainsKey(ContactNumber);
-
-        //} while ((!isNotUnique) && (string.IsNullOrWhiteSpace(ContactNumber)) && ContactNumber == "");
-
-        if (Contacts.TryGetValue(ContactNumber, out string Name))
+        Console.WriteLine("Enter a Contact Name:");
+        string ContactName;
+        bool isFound;
+        do
         {
-            Console.WriteLine($"{Name} Contacts");
-        }
-        else { Console.WriteLine("Contact Not Found"); } 
-
-        //Contacts.Add(ContactNumber, ContactName);
-        //Console.WriteLine("Contact Added Successfully.");
+            isFound=false;
+            ContactName = Console.ReadLine().Trim();
+            foreach(var entry in Contacts)
+            {
+                if(entry.Value == ContactName)
+                {
+                    Console.WriteLine("The Contact of {0} is {1}",entry.Value,entry.Key);
+                    isFound = true;
+                    
+                }
+             
+            }
+                    Console.WriteLine("The Conatact {0} is not Present",ContactName);
+                    isFound = true;
+                    break;
+        } while (isFound==false);
 
     }
 
@@ -135,8 +170,13 @@ public class ContactManager
             isNotPresent = Contacts.ContainsKey(ContactNumber);
 
         } while (!isNotPresent);
-        string ContactName = Console.ReadLine();
 
+
+        string ContactName;
+           do {
+            Console.WriteLine("Enter a Contact Name:");
+            ContactName = Console.ReadLine();
+        } while ((string.IsNullOrWhiteSpace(ContactNumber)) && ContactNumber == "");
         Contacts[ContactNumber] = ContactName;
         //    Console.WriteLine( "Updated contact for {0} "+"Alice",Contacts["Alice"]);
         //Contacts.Remove(ContactNumber);
