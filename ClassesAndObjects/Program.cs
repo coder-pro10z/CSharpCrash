@@ -18,3 +18,6 @@ SecondPerson.SetAge(23);
 Console.WriteLine($"The First Name of the SecondPerson is {SecondPerson.GetFirstName()} {SecondPerson.GetSecondName()} and Age is {SecondPerson.GetAge()}.");
 //Using .ToString after Overriding function
 Console.WriteLine(SecondPerson.ToString());
+
+Person ThirdPerson = new Person("John","Doe",20);
+Console.WriteLine(ThirdPerson.ToString() + $" and his age is {ThirdPerson.GetAge()}.");
