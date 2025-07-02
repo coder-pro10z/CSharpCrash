@@ -10,7 +10,7 @@ namespace ClassesAndObjects
     {
         private string? firstName; //string? declaring a nullable string
         private string? secondName;
-
+        private int? Age;
         //default constructor - no arguments
         public Person()
         {
@@ -24,6 +24,14 @@ namespace ClassesAndObjects
             secondName = ln;
         }
 
+        //parameterized constructor - 3 params
+        public Person(string fn, string ln, int _age)
+        {
+            firstName = fn;
+            secondName = ln;
+            Age = _age;
+        }
+
         public string GetFirstName()
         { 
             return firstName;
@@ -33,6 +41,14 @@ namespace ClassesAndObjects
         {
             return secondName;
         }
+        public int? GetAge()
+        {
+            return Age;
+        }
+        public void SetAge(int _age) {
+
+            Age =_age; }
+
 
         public void SetFirstName(string _firstname)
         {
@@ -44,6 +60,10 @@ namespace ClassesAndObjects
             secondName = _secondname;
         }
 
+        public override string ToString()
+        {
+            return $"The Person's Name is {firstName} and second Name is {secondName}.";
+        }
 
 
 
