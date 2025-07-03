@@ -8,3 +8,5 @@ student1.Id = 1;
 //student1.gpa = 3;
 
 Console.WriteLine($"{student1.Name}'s ID is {student1.Id} and Gpa is :{student1.gpa}");
+
+student1.StartCourse();
