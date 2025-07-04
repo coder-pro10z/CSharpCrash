@@ -16,9 +16,6 @@ namespace Inheritance
             Console.WriteLine("Opened Laptop , Nootebook, took a pen , with all attention and focus.");
         }
 
-        public void StopCourse()
-        {
-            throw new NotImplementedException();
-        }
+        public void StopCourse() => Console.WriteLine("Finished Course.");
     }
 }
