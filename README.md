@@ -180,3 +180,5 @@ Learning from [Coderversity – C# Crash Course on YouTube](https://www.youtube.
 
 > 💬 “The best way to learn is by doing. Keep practicing and breaking things!”
 >
+
+financial dashboard 
